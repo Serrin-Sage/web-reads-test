@@ -1,0 +1,483 @@
+.color-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    cursor: default;
+}
+
+.theme-options {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px 0;
+    div {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        margin: 2px 10px;
+        border: 1px solid #fff;
+        display: inline-block;
+        opacity: 0.5;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+    #default-theme {
+        background-color: #4eb5f1;
+        transition: 0.8s;
+    }
+    #dark-theme {
+        background-color: rgb(44, 44, 44);
+        transition: 0.8s;
+    }
+    #colorful-theme {
+        background: linear-gradient(to bottom right,pink 45%, #90e6e6 55%);
+        transition: 0.8s;
+    }
+    #hunter-theme {
+        background: linear-gradient(to bottom right, purple 45%, white 55%);
+        border-color: black;
+    }
+}
+
+.color-switcher {
+    transition: 0.8s;
+}
+
+.theme-text {
+    padding: 1rem;
+    border-radius: 8px;
+    transition: 0.8s;
+}
+
+.color-switcher.default-theme {
+    .content-box {
+        color: #000000;
+        text-decoration: underline;
+    }
+    .theme-text {
+        background-color: #148bcf;
+    }
+}
+
+
+.color-switcher.colorful-theme {
+    .content-box {
+        color: rgb(148, 5, 148);
+        text-decoration: underline;
+    }
+    .theme-text {
+        background-color: rgb(247, 156, 171);
+        color: rgb(148, 5, 148);
+    }
+}
+
+
+
+
+//******** THEMES *********//
+.App.default-theme {
+    transition: 0.8s;
+}
+
+//===== DARK THEME =====//
+.App.dark-theme{
+    transition: 0.8s;
+    //Header
+    .header {
+        background-color: #000000;
+        transition: 0.8s;
+        .signinbtn {
+            background-color: #444444;
+            border: 1px solid #000000;
+            transition: 0.8s;
+        }
+        .signinbtn:hover {
+            background-color: rgb(255, 255, 255);
+            color:#000000;
+        }
+        .signupbtn {
+            background-color: #444444;
+            border: 1px solid #000000;
+            transition: 0.8s;
+        }
+        .signupbtn:hover {
+            background-color: rgb(255, 255, 255);
+            color:#000000;
+        }
+        .logo-img {
+            filter: brightness(0) invert(1);
+        }
+    }
+    //Intro
+    .howitworks {
+        background: linear-gradient(135deg, #818181, #131414);
+    }
+    //Sign-in/up Forms
+    .formcontainer {
+        background: linear-gradient(135deg, #818181, #131414);
+        h2 {
+            color: white;
+        }
+        .app-wrapper {
+            background-color: rgba(0, 0, 0, 0.411);
+        }
+        .submit {
+            background-color: #444444;
+            color: rgb(255, 255, 255);
+            border: none;
+        }
+        .submit:hover {
+            background-color: white;
+            color: black;
+        }
+        .bottom-text {
+            color: white;
+        }
+    }
+
+    //Profile page
+    .user-page-container {
+        .side-bar-nav {
+            background-color: black;
+            transition: 0.8s;
+            
+            .settings-text {
+                background: linear-gradient(#838383, #333333);
+                border: none;
+            }
+            .settings-text:hover{
+                background: linear-gradient(#333333,#838383);
+            }
+        }
+        .main-user-page {
+            background: linear-gradient(135deg, #444444, #888888);
+        }
+    }
+    .settings {
+        transition: 0.8s;
+        background-color: rgb(75, 75, 75);
+        .content-box {
+            color: white;
+            text-decoration: underline;
+        }
+        .theme-text {
+            background-color: #444444;
+            color: white;
+        }
+        .pic-switch-title {
+            color: white;
+        }
+        h3 {
+            color: white;
+        }
+    }
+}
+
+.Footer.dark-theme {
+    .footer {
+        background-color: rgb(59, 59, 59);
+        .contact {
+            color: rgb(196, 196, 196);
+        }
+        .contact:hover {
+            color: white;
+        }
+    }
+    #abt-serrin {
+        background-color: #303030;
+        color: white;
+        
+    }
+    #abt-sadia {
+        background-color: #282828;
+        color: white;
+        
+    }
+    #abt-chris {
+        background-color: #242424;
+        color: white;
+        
+    }
+    #abt-aida {
+        background-color: #202020;
+        color: white;
+        
+    }
+
+    .link-icon {
+        color: white;
+    }
+}
+
+//===== COLORFUL THEME =====//
+.App.colorful-theme{
+    transition: 0.8s;
+    //Header
+    .header {
+        background-color: #8cdce7;
+        transition: 0.8s;
+        .signinbtn {
+            background-color: #e4a1de;
+            border: 1px solid #8cdce7;
+            transition: 0.8s;
+        }
+        .signinbtn:hover {
+            background-color: #a1c0e4;
+            color:#000000;
+        }
+        .signupbtn {
+            background-color: #e4a1de;
+            border: 1px solid #8cdce7;
+            transition: 0.8s;
+        }
+        .signupbtn:hover {
+            background-color: #a1c0e4;
+            color:#000000;
+        }
+        .logo-img {
+            filter: invert(8%) sepia(100%) saturate(7122%) hue-rotate(309deg) brightness(67%) contrast(101%);
+        }
+    }
+    
+    //Intro
+    .howitworks {
+        background: linear-gradient(135deg, #ebace5, #90e6e6);
+    }
+    //Sign-in/up Forms
+    .formcontainer {
+        background: linear-gradient(135deg, #ebace5, #90e6e6);
+        h2 {
+            color: rgba(112, 7, 116, 0.849);
+        }
+        .app-wrapper {
+            background-color: rgba(255, 0, 221, 0.411);
+        }
+        .form-field {
+            color:white;
+        }
+        .submit {
+            background-color: #89acf7;
+            color: rgb(255, 255, 255);
+            border: none;
+        }
+        .submit:hover {
+            background-color: rgb(113, 112, 179);
+            color: rgb(255, 255, 255);
+        }
+        .bottom-text {
+            color: white;
+        }
+    }
+
+    //Profile page
+    .user-page-container {
+        .side-bar-nav {
+            background-color: rgb(183, 235, 248);
+            .settings-text {
+                background: #ebace5;
+                border: none;
+            }
+            .settings-text:hover{
+                background: linear-gradient(135deg, #90e6e6, #ebace5);
+            }
+        }
+        .main-user-page {
+            background: linear-gradient(270deg, #90e6e6, #ebace5);
+        }
+    }
+    //Settings
+    .settings {
+        background-color: pink;
+        .content-box {
+            color: rgb(148, 5, 148);
+            text-decoration: underline;
+        }
+        .theme-text {
+            background-color: rgb(247, 156, 171);
+            color: rgb(148, 5, 148);
+        }
+        .pic-switch-title {
+            color: rgb(148, 5, 148);
+        }
+    }
+}
+
+.Footer.colorful-theme {
+    .footer {
+        background-color: #46a0ac;
+        .contact {
+            color: rgb(132, 0, 255);
+        }
+        .contact:hover {
+            color: white;
+        }
+    }
+    .abtus-title {
+        color: rgb(132, 0, 255);
+    }
+    #abt-serrin {
+        background-color: #E0B4E6;
+        color: white;
+        
+    }
+    #abt-sadia {
+        background-color: #90E6E6;
+        color: white;
+        
+    }
+    #abt-chris {
+        background-color: #E0B4E6;
+        color: white;
+        
+    }
+    #abt-aida {
+        background-color: #90E6E6;
+        color: white;
+        
+    }
+
+    .link-icon {
+        color: white;
+    }
+}
+
+//===== HUNTER THEME =====//
+.App.hunter-theme{
+    transition: 0.8s;
+    //Header
+    .header {
+        background-color: #ffffff;
+        transition: 0.8s;
+        .signinbtn {
+            background-color: #751485;
+            border: 1px solid #751485;
+            transition: 0.5s;
+            color: #ffffff;
+        }
+        .signinbtn:hover {
+            background-color: #ffffff;
+            color:#000000;
+        }
+        .signupbtn {
+            background-color: #751485;
+            border: 1px solid #751485;
+            transition: 0.5s;
+            color: #ffffff;
+        }
+        .signupbtn:hover {
+            background-color: #ffffff;
+            color:#000000;
+        }
+        .logo-img {
+            filter: invert(13%) sepia(93%) saturate(2303%) hue-rotate(278deg) brightness(104%) contrast(105%);
+        }
+    }
+    
+    //Intro
+    .howitworks {
+        background: linear-gradient(135deg, #751485, #922ca1);
+    }
+    //Sign-in/up Forms
+    .formcontainer {
+        background: linear-gradient(135deg, #ffffff, #ffffff);
+        h2 {
+            color: rgba(255, 255, 255);
+        }
+        .app-wrapper {
+            background-color: rgb(106, 0, 155);
+        }
+        .form-field {
+            color:white;
+        }
+        .submit {
+            background-color: rgb(255, 255, 255);;
+            color: rgb(106, 0, 155);
+            border: none;
+        }
+        .submit:hover {
+            background-color: rgb(150, 0, 219);
+            color: rgb(255, 255, 255);
+        }
+        .bottom-text {
+            color: white;
+        }
+    }
+
+    //Profile page
+    .user-page-container {
+        .side-bar-nav {
+            background-color: rgb(106, 0, 155);
+            .settings-text {
+                background: #751485;
+                border: none;
+                color: rgb(252, 252, 252);
+            }
+            .settings-text:hover{
+                background: linear-gradient(135deg, #751485, #450c4e);
+            }
+        }
+        .main-user-page {
+            // background: linear-gradient(270deg, #751485, #450c4e);
+            background-color: white;
+        }
+    }
+    //Settings
+    .settings {
+        background-color: rgb(255, 255, 255);
+        .content-box {
+            color: rgb(106, 0, 155);
+            text-decoration: underline;
+        }
+        .theme-text {
+            background-color: rgb(106, 0, 155);
+            color: rgb(255, 255, 255);
+        }
+        .pic-switch-title {
+            color: rgb(106, 0, 155);
+        }
+        
+    }
+}
+
+.Footer.hunter-theme {
+    .footer {
+        background-color: rgb(106, 0, 155);
+        .contact {
+            color: rgb(255, 208, 0);
+        }
+        .contact:hover {
+            color: white;
+        }
+    }
+    .abtus-title {
+        color: rgb(132, 0, 255);
+    }
+    #abt-serrin {
+        background-color: #E0B4E6;
+        color: white;
+        
+    }
+    #abt-sadia {
+        background-color: #90E6E6;
+        color: white;
+        
+    }
+    #abt-chris {
+        background-color: #E0B4E6;
+        color: white;
+        
+    }
+    #abt-aida {
+        background-color: #90E6E6;
+        color: white;
+        
+    }
+
+    .link-icon {
+        color: white;
+    }
+}

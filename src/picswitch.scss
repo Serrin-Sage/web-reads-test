@@ -1,0 +1,463 @@
+.picture-switcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.pic-switch-title {
+    text-decoration: underline;
+}
+
+.profile-pic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-icon {
+    height: 120px;
+    width: 120px;
+    background-size: 120px;
+    margin-top: 2rem;
+}
+
+.icon-div .hover-text {
+    visibility: hidden;
+    width: auto;
+    background-color: rgb(160, 160, 160);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.icon-div .hover-text::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(160, 160, 160) transparent;
+}
+
+.icon-div:hover .hover-text {
+    visibility: visible;
+}
+
+.hover-text {
+    margin-top: 92px;
+}
+
+//******** DEFAULT PIC OPTIONS ********//
+.default-picture-options {
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+        cursor: pointer;
+        width: 52px;
+        height: 52px;
+        border-radius: 4px;
+        margin: 2px 10px 10px;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+
+        &.active {
+           opacity: 0.5;
+           border-color: red;
+        }
+    }
+    #default-icon {
+        background-image: url('icons/user-default-gray.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+   
+    #cat-icon {
+        background-image: url('icons/happy.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #dog-icon {
+        background-image: url('icons/dog-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #alien-icon {
+        background-image: url('icons/cute-alien-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #monster-icon {
+        background-image: url('icons/monster-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #rabbit-icon {
+        background-image: url('icons/rabbit-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #writer-icon {
+        background-image: url('icons/shakespeare-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #stormtrooper-icon {
+        background-image: url('icons/stormtrooper-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #hunter-icon {
+        background-image: url('icons/hunter-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+}
+
+.user-icon.default-icon {
+    background-image: url('icons/user-default-gray.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.cat-icon {
+    background-image: url('icons/happy.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.dog-icon {
+    background-image: url('icons/dog-icon.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.alien-icon {
+    background-image: url('icons/cute-alien-icon.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.monster-icon {
+    background-image: url('icons/monster-icon.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.rabbit-icon {
+    background-image: url('icons/rabbit-icon.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.writer-icon {
+    background-image: url('icons/shakespeare-icon.png');
+    background-repeat: no-repeat;
+}
+
+//******** RANDOM PIC OPTIONS ********//
+.random-picture-options {
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+        cursor: pointer;
+        width: 52px;
+        height: 52px;
+        border-radius: 4px;
+        margin: 2px 10px 10px;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+
+        &.active {
+           opacity: 0.5;
+           border-color: red;
+        }
+    }
+    #stormtrooper-icon {
+        background-image: url('icons/stormtrooper-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+    #hunter-icon {
+        background-image: url('icons/hunter-icon.png');
+        background-size: 50px;
+        background-repeat: no-repeat;
+    }
+}
+
+.user-icon.stormtrooper-icon {
+    background-image: url('icons/stormtrooper-icon.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.hunter-icon {
+    background-image: url('icons/hunter-icon.png');
+    background-repeat: no-repeat;
+}
+
+
+//******** FLAG PIC OPTIONS ********//
+.flag-picture-options {
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 20px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+        cursor: pointer;
+        width: 52px;
+        height: 52px;
+        border-radius: 4px;
+        margin: 2px 10px 10px;
+        border: 1px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 50px;
+        background-repeat: no-repeat;
+
+        &.active {
+            opacity: 0.5;
+            border-color: red;
+        }
+    }
+    #australia-icon {
+        background-image: url('flag-icons/australia.png');
+    }
+    #bangladesh-icon {
+        background-image: url('flag-icons/bangladesh.png');
+    }
+    #brazil-icon {
+        background-image: url('flag-icons/brazil.png');
+    }
+    #canada-icon {
+        background-image: url('flag-icons/canada.png');
+    }
+    #china-icon {
+        background-image: url('flag-icons/china.png');
+    }
+    #egypt-icon {
+        background-image: url('flag-icons/egypt.png');
+    }
+    #france-icon {
+        background-image: url('flag-icons/france.png');
+    }
+    #germany-icon {
+        background-image: url('flag-icons/germany.png');
+    }
+    #india-icon {
+        background-image: url('flag-icons/india.png');
+    }
+    #italy-icon {
+        background-image: url('flag-icons/italy.png');
+    }
+    #japan-icon {
+        background-image: url('flag-icons/japan.png');
+    }
+    #mexico-icon {
+        background-image: url('flag-icons/mexico.png');
+    }
+    #nepal-icon {
+        background-image: url('flag-icons/nepal.png');
+    }
+    #netherlands-icon {
+        background-image: url('flag-icons/netherlands.png');
+    }
+    #philippines-icon {
+        background-image: url('flag-icons/philippines.png');
+    }
+    #russia-icon {
+        background-image: url('flag-icons/russia.png');
+    }
+    #saudi-arabia-icon {
+        background-image: url('flag-icons/saudi-arabia.png');
+    }
+    #singapore-icon {
+        background-image: url('flag-icons/singapore.png');
+    }
+    #south-africa-icon {
+        background-image: url('flag-icons/south-africa.png');
+    }
+    #south-korea-icon {
+        background-image: url('flag-icons/south-korea.png');
+    }
+    #spain-icon {
+        background-image: url('flag-icons/spain.png');
+    }
+    #sweden-icon {
+        background-image: url('flag-icons/sweden.png');
+    }
+    #thailand-icon {
+        background-image: url('flag-icons/thailand.png');
+    }
+    #turkey-icon {
+        background-image: url('flag-icons/turkey.png');
+    }
+    #ukraine-icon {
+        background-image: url('flag-icons/ukraine.png');
+    }
+    #united-kingdom-icon {
+        background-image: url('flag-icons/united-kingdom.png');
+    }
+    #united-states-icon {
+        background-image: url('flag-icons/united-states-of-america.png');
+    }
+
+}
+
+.user-icon.australia-icon {
+    background-image: url('flag-icons/australia.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.bangladesh-icon {
+    background-image: url('flag-icons/bangladesh.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.brazil-icon {
+    background-image: url('flag-icons/brazil.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.canada-icon {
+    background-image: url('flag-icons/canada.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.china-icon {
+    background-image: url('flag-icons/china.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.egypt-icon {
+    background-image: url('flag-icons/egypt.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.france-icon {
+    background-image: url('flag-icons/france.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.germany-icon {
+    background-image: url('flag-icons/germany.png');
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.user-icon.india-icon {
+    background-image: url('flag-icons/india.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.italy-icon {
+    background-image: url('flag-icons/italy.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.japan-icon {
+    background-image: url('flag-icons/japan.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.mexico-icon {
+    background-image: url('flag-icons/mexico.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.nepal-icon {
+    background-image: url('flag-icons/nepal.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.netherlands-icon {
+    background-image: url('flag-icons/netherlands.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.philippines-icon {
+    background-image: url('flag-icons/philippines.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.russia-icon {
+    background-image: url('flag-icons/russia.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.saudi-arabia-icon {
+    background-image: url('flag-icons/saudi-arabia.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.singapore-icon {
+    background-image: url('flag-icons/singapore.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.south-africa-icon {
+    background-image: url('flag-icons/south-africa.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.south-korea-icon {
+    background-image: url('flag-icons/south-korea.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.spain-icon {
+    background-image: url('flag-icons/spain.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.sweden-icon {
+    background-image: url('flag-icons/sweden.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.thailand-icon {
+    background-image: url('flag-icons/thailand.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.turkey-icon {
+    background-image: url('flag-icons/turkey.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.ukraine-icon {
+    background-image: url('flag-icons/ukraine.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.united-kingdom-icon {
+    background-image: url('flag-icons/united-kingdom.png');
+    background-repeat: no-repeat;
+}
+
+.user-icon.united-states-icon {
+    background-image: url('flag-icons/united-states-of-america.png');
+    background-repeat: no-repeat;
+}
